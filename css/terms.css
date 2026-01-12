@@ -1,0 +1,63 @@
+div .banner-tc {
+    background-image: url('/image/tc/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: auto;
+    width: 100%;
+    padding: 50px 0;
+    margin: 0;
+}
+div .heading h1 {
+    font-family: Futura;
+    font-size: 3em;
+}
+div .heading{
+    margin-top: 0%;
+}
+h1 {
+    color: #FDC830;
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+div .tc-main {
+    background-color: #111212;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(57, 57, 57, 0.374);
+    margin-top: 20px;
+}
+.tc-main h3 {
+    color: #FDC830;
+    margin-top: 20px;
+    text-shadow: #FDC830 1px 1px 2px;
+}
+
+.tc-text h3:hover {
+    color: #F37335;
+    transition: 0.3s;
+}
+
+.tc-text p {
+    color: gray;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.tc-text p:hover{
+    color: white;
+    transition: 0.3s;
+}
+
+.tc-text{
+    margin-bottom: 30px;
+}
+i{
+    color: #FDC830;
+    margin-right: 10px;
+}

@@ -1,0 +1,71 @@
+.heading-faq h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #FDC830;
+}
+.heading-faq p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 1.6;
+}
+.faq-main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.faq-item{
+    background: #111212;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+    border: 1px solid #FDC830;
+    position: relative;
+}
+.dropdown-que {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.dropdown-que i {
+    margin-left: 10px;
+    cursor: pointer;
+    color: #FDC830;
+
+}
+
+/* Dropdown */
+.dropdown-ans {
+    background: #111212;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.dropdown-ans a {
+    color: #FFFFFF;
+    padding: 10px 0;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-ans a:hover {
+    color: #FDC830;
+}
+
+.dropdown-ans.show {
+    opacity: 1;
+    max-height: 500px;
+    pointer-events: auto;
+}
+
+.heading-faq:hover {
+    text-shadow: #FDC830 0px 0px 3px;
+}

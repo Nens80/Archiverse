@@ -1,0 +1,131 @@
+body, html {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Albert Sans', sans-serif;
+  background-color: #111212;
+  margin-top: 50px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection{
+  background-color: #FDC830;
+  color: black;
+}
+
+#preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 100vh;
+  background-color: #111212; 
+  z-index: 9999; 
+}
+
+#main-content-wrapper {
+  display: none; 
+}
+
+body.preload-active {
+  overflow: hidden; 
+}
+
+body.page-loaded {
+  overflow: auto; 
+}
+
+body.page-loaded #main-content-wrapper {
+  display: block; 
+}
+
+#preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: none;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#preloader p {
+  font-family: "JetBrains Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 15vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 2ch;
+  line-height: 2ch;
+  overflow: clip;
+  color: white;
+  transition: 1.6s cubic-bezier(.65,.05,0,1) transform;
+}
+
+#preloader .number-track {
+  width: 1ch;
+  transition: 1.8s cubic-bezier(.65,.05,0,1) transform;
+  pointer-events: none;
+  user-select: none;
+}
+
+@keyframes trackClip {
+  0% {
+    clip-path: polygon(0% 200%, 100% 200%, 100% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes track100Clip {
+  0% {
+    clip-path: polygon(0% 300%, 100% 300%, 100% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0% 200%, 100% 200%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes track10Clip {
+  0% {
+    clip-path: polygon(0% 1200%, 100% 1200%, 100% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0% 1100%, 100% 1100%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes track1Clip {
+  0% {
+    clip-path: polygon(0% 10200%, 100% 10200%, 100% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0% 10075%, 100% 10075%, 100% 100%, 0% 100%);
+  }
+}
+
+:root {
+  --left: calc(50% - (15vh) * 2.5);
+  --right: calc(50% + (15vh) * 2.5);
+  --top: 47%;
+  --bottom: 60%;
+}
+
+@keyframes preloaderClip {
+  0% {
+    clip-path: polygon(evenodd, 0% 0%, 100% 0%, 100% 100%, 0% 100%, var(--left) var(--bottom), var(--left) var(--top), var(--right) var(--top), var(--right) var(--bottom), var(--left) var(--bottom), 0% 100%);
+  }
+  100% {
+    clip-path: polygon(evenodd, 0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%, 0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%);
+  }
+}

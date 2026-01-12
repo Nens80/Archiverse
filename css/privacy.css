@@ -1,0 +1,44 @@
+div .privacy-heading h1{
+    color: #FDC830;
+    text-shadow: #FDC830 0px 0px 3px ;
+}
+
+div .privacy-card{
+    background: #161717;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(86, 85, 85, 0.205);
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+div .privacy-text h2{
+    color: #FDC830;
+}
+
+.privacy-text h2:hover {
+    color: #F37335;
+    transition: 0.3s;
+}
+
+.privacy-text p {
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.privacy-text p:hover{
+    text-shadow: white 0px 0px 2px;
+    transition: 0.3s;
+}
+
+p a{
+    color: #FDC830;
+}
+
+p a:hover{
+    color: #F37335;
+    transition: 0.3s;
+}
+
+.dis{
+        text-shadow:none;
+}

@@ -1,0 +1,91 @@
+.service-item {
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  padding: 30px 30px;
+  text-align: center;
+  height: 100%;
+  transition: all 0.4s ease;
+}
+
+.service-item .service-text {
+  position: relative;
+  z-index: 2;
+}
+
+.service-item .bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.1);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 0;
+}
+
+/* Dark overlay for readability */
+.service-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.50);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+/* Icon color normal */
+.service-item img.mb-4 {
+  max-width: 75px;
+  margin-bottom: 25px;
+  transition: all 0.4s ease;
+  filter: none;
+}
+
+.service-item h3,
+.service-item p {
+  transition: all 0.4s ease;
+  color: #000;
+}
+
+/* Button default hidden */
+.service-item .btn {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+  background: #fff;
+  color: #000;
+  border-radius: 8px;
+}
+
+/* HOVER EFFECTS */
+.service-item:hover .bg-img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.service-item:hover::after {
+  opacity: 1;
+}
+
+.service-item:hover h3,
+.service-item:hover p {
+  color: #fff;
+}
+
+.service-item:hover img.mb-4 {
+  filter: brightness(10);
+}
+
+.service-item:hover .btn {
+  opacity: 1;
+  transform: translateY(0);
+  color: #fff;
+  background: #FDC830;
+}

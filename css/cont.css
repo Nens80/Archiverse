@@ -1,0 +1,38 @@
+div.bg-img-con{
+    background: url(/image/lovepik-panoramic-view-of-high-buildings-in-chongqing-picture_500652488.jpg);
+    opacity: 0.8;
+    height: auto;
+    align-items: center;
+    justify-items:start;
+}
+div.con-map{
+    height: 100%;
+    max-width: 100%;
+    align-items: center;
+    padding: 30px;
+    align-items: center;
+    display: block;
+}
+.con-text a{
+    text-decoration: none;
+    color: #FDC830;
+    font-size: x-large;
+    margin-left: 25px;
+    text-shadow: black;
+    border: black 1px;
+}
+.parent-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+li {
+    list-style: none;
+}
+.contect-title{
+    color: #FDC830;
+    text-align: center;
+}
+.contect-title:hover {
+    text-shadow: #FDC830 0px 0px 3px;
+}

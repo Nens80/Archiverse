@@ -1,0 +1,36 @@
+.project-btn {
+    background: #fff;
+    border: 2px solid #000;
+    font-weight: 600;
+    color: #000;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.project-btn.active,
+.project-btn:hover {
+    background: #FDC830;
+    border-color: #FDC830;
+}
+
+.project-btn-a {
+    background:#FDC830;
+    border: 2px solid #000;
+    font-weight: 600;
+    color: #000;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    transition: 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.project-btn-a:hover {
+    background:#fff ;
+    border-color: #FDC830;
+    color:#FDC830;
+}

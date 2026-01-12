@@ -1,0 +1,78 @@
+.team-item{
+    padding: 20px;
+}
+.team-social{
+    position: absolute;
+    left: 0%;
+    bottom: -20px;
+    width: 100%;
+}
+.team-item .team-social .btn {
+    text-decoration: none;
+    color: #FDC830;
+    background-color: aliceblue;
+    display: inline-flex;
+    margin: 0 2px;
+}
+.team-item .team-social .btn:hover{
+    background-color: #FDC830;
+    color: aliceblue;
+}
+.bg-team{
+    background-color: aliceblue;
+}
+.bg-team h3{
+    color: #FDC830;
+}
+
+.card-animated {
+    position: relative;
+    border-radius: 0px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding-bottom: 0px;
+}
+
+.card-animated::before,
+.card-animated::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0px;
+    background:#FDC830;
+    transition: all 0.5s ease;
+}
+
+.card-animated::before {
+    top: 0;
+    left: 0;
+}
+
+.card-animated::after {
+    bottom: 0;
+    right: 0;
+}
+
+.card-animated:hover::before,
+.card-animated:hover::after {
+    width: 100%;
+}
+
+.card-animated:hover::before {
+    height: 100%;
+    width: 5px;
+    transition: width 0.5s ease, height 0.5s ease 0.5s;
+}
+
+.card-animated:hover::after {
+    height: 100%;
+    width: 5px;
+    transition: width 0.5s ease, height 0.5s ease 0.5s;
+}
+
+.section-title {
+    color: #FDC830;
+}
+.section-title:hover {
+    text-shadow: #FDC830 0px 0px 3px;
+}
