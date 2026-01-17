@@ -11,7 +11,7 @@ body, html {
   box-sizing: border-box;
 }
 
-::selection{
+::selection {
   background-color: #FDC830;
   color: black;
 }
@@ -21,9 +21,13 @@ body, html {
   align-items: center;
   justify-content: center;
   position: fixed;
+  /* Use viewport units to ensure it covers mobile screens fully */
   height: 100vh;
+  width: 100vw;
   background-color: #111212; 
   z-index: 9999; 
+  top: 0;
+  left: 0;
 }
 
 #main-content-wrapper {
@@ -42,13 +46,14 @@ body.page-loaded #main-content-wrapper {
   display: block; 
 }
 
+/* Duplicate ID selector from original - combined logic */
 #preloader {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  overflow: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   background-color: black;
   position: fixed;
   top: 0;
@@ -56,19 +61,21 @@ body.page-loaded #main-content-wrapper {
 }
 
 #preloader p {
-  font-family: "JetBrains Mono", serif;
+  font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-size: 15vh;
+  /* clamp(min, preferred, max) prevents text from exceeding screen width */
+  font-size: clamp(30px, 11vw, 15vh);
   display: flex;
   justify-content: center;
   flex-direction: row;
   height: 2ch;
   line-height: 2ch;
-  overflow: clip;
+  overflow: hidden;
   color: white;
   transition: 1.6s cubic-bezier(.65,.05,0,1) transform;
+  margin: 0;
 }
 
 #preloader .number-track {
@@ -76,6 +83,7 @@ body.page-loaded #main-content-wrapper {
   transition: 1.8s cubic-bezier(.65,.05,0,1) transform;
   pointer-events: none;
   user-select: none;
+  text-align: center;
 }
 
 @keyframes trackClip {
@@ -115,8 +123,10 @@ body.page-loaded #main-content-wrapper {
 }
 
 :root {
-  --left: calc(50% - (15vh) * 2.5);
-  --right: calc(50% + (15vh) * 2.5);
+  /* This variable ensures the clip-path animation scales with the font size */
+  --responsive-font: clamp(30px, 11vw, 15vh);
+  --left: calc(50% - (var(--responsive-font)) * 2.5);
+  --right: calc(50% + (var(--responsive-font)) * 2.5);
   --top: 47%;
   --bottom: 60%;
 }
